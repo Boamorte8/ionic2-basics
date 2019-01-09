@@ -13,8 +13,14 @@ export class HomePage {
 
   }
 
-  // onGoToUsers() {
-  //   this.navCtrl.push(UsersPage);
-  // }
+  onGoToUsers() {
+    this.navCtrl.push(UsersPage)
+      .then(result => {
+        console.log('Result', result);
+      })
+      .catch(error => {
+        console.log('Access denied!');
+      });
+  }
 
 }
